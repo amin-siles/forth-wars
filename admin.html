@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FORTH WARS — Administración</title><link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script></head>
+<body>
+<div class="admin-shell">
+<header class="top"><div class="brand"><div class="crest">FW</div><div><h1>FORTH WARS</h1><small>PANEL DE ADMINISTRACIÓN</small></div></div><button id="logout" class="btn danger hidden">Cerrar sesión</button></header>
+<main>
+<section id="loginBox" class="login card"><h2>🔐 Acceso administrativo</h2><p>Inicia sesión con la cuenta de administrador de Supabase.</p>
+<input id="email" type="email" placeholder="Correo del administrador"><input id="password" type="password" placeholder="Contraseña">
+<button id="login" class="btn">Iniciar sesión</button><p id="loginMsg" class="msg"></p></section>
+
+<section id="panel" class="hidden">
+<div class="admin-head"><div><h2>Panel de estadísticas</h2><p>Los cambios se guardan en Supabase y la página pública los recibe en tiempo real.</p></div><span id="saveStatus" class="status">Conectando...</span></div>
+<div class="admin-grid">
+<article class="card"><h3>⚙️ Datos del clan</h3>
+<label>Nivel <input id="clan_level" type="number"></label><label>Liga <input id="clan_league"></label><label>Racha <input id="clan_streak" type="number"></label><label>Miembros <input id="clan_members" type="number"></label><button class="btn save-clan">Guardar clan</button></article>
+<article class="card"><h3>⚔️ Guerra</h3>
+<label>Victorias <input id="war_wins" type="number"></label><label>Derrotas <input id="war_losses" type="number"></label><label>Empates <input id="war_draws" type="number"></label><label>Mejor racha <input id="war_best_streak" type="number"></label><label>Guerras disputadas <input id="war_total" type="number"></label><button class="btn save-war">Guardar guerra</button></article>
+</div>
+
+<article class="card"><div class="admin-head"><h3>👥 Miembros y estadísticas</h3><button class="btn" id="addMember">+ Nuevo miembro</button></div>
+<div class="table-wrap"><table><thead><tr><th>Nombre</th><th>TH</th><th>Rango</th><th>⭐</th><th>💰</th><th>🏅</th><th>Activo</th><th></th></tr></thead><tbody id="adminMembers"></tbody></table></div></article>
+
+<article class="card"><h3>🏆 Reconocimientos</h3><div class="admin-grid">
+<label>Jugador del mes <select id="month_player"></select></label>
+<label>Jugador con rango más alto <select id="highest_player"></select></label>
+</div><button class="btn save-awards">Guardar reconocimientos</button></article>
+
+<article class="card"><h3>🎁 Premios</h3><div id="prizesAdmin"></div><button class="btn" id="addPrize">+ Agregar premio</button></article>
+<p id="adminMsg" class="msg"></p>
+</section>
+</main>
+</div>
+<script src="config.js"></script><script src="admin.js"></script>
+</body></html>

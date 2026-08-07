@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FORTH WARS — Estadísticas</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<div id="app">
+<header class="top">
+  <div class="brand"><div class="crest">FW</div><div><h1>FORTH WARS</h1><small>UNIÓN • DISCIPLINA • VICTORIA</small></div></div>
+  <nav><a href="#inicio">Inicio</a><a href="#rankings">Rankings</a><a href="#guerras">Guerras</a><a href="#miembros">Miembros</a><a href="#premios">Premios</a><a href="admin.html">Admin</a></nav>
+</header>
+
+<main>
+<section id="inicio" class="hero">
+  <div><div><span class="eyebrow">PANEL OFICIAL DEL CLAN</span><h2>Competencia, estadísticas y premios.</h2><p>Consulta el rendimiento mensual de FORTH WARS.</p></div><a class="btn" href="#rankings">Ver rankings</a></div>
+  <div class="metrics">
+    <div><b id="mLevel">—</b><span>NIVEL</span></div><div><b id="mLeague">—</b><span>LIGA</span></div><div><b id="mStreak">—</b><span>RACHA</span></div><div><b id="mMembers">—</b><span>MIEMBROS</span></div>
+  </div>
+</section>
+
+<section class="cards highlight">
+  <article class="card"><h3>🏆 Jugador del mes</h3><div id="playerMonth">Cargando...</div></article>
+  <article class="card"><h3>👑 Rango más alto del mes pasado</h3><div id="highestRank">Cargando...</div></article>
+  <article class="card"><h3>💰 Top donadores</h3><div id="donationTop">Cargando...</div></article>
+</section>
+
+<section id="rankings" class="section">
+<h2>🏆 Rankings del mes</h2>
+<div class="tabs"><button class="tab active" data-rank="stars">⭐ Estrellas</button><button class="tab" data-rank="donations">💰 Donadores</button><button class="tab" data-rank="medals">🏅 Medallas</button></div>
+<div class="table-wrap card"><table><thead><tr><th>#</th><th>Jugador</th><th>TH</th><th>Rango</th><th>⭐</th><th>💰</th><th>🏅</th></tr></thead><tbody id="rankingBody"><tr><td colspan="7">Cargando...</td></tr></tbody></table></div>
+</section>
+
+<section id="guerras" class="section">
+<h2>⚔️ Estadísticas de guerra</h2><div class="stats" id="warStats"></div>
+</section>
+
+<section id="miembros" class="section">
+<h2>👥 Miembros</h2><div class="grid" id="memberGrid"><div class="card">Cargando...</div></div>
+</section>
+
+<section id="premios" class="section">
+<h2>🎁 Premios y mini torneos</h2><div class="grid" id="prizeGrid"><div class="card">Cargando...</div></div>
+</section>
+</main>
+<footer>FORTH WARS © 2026 — PANEL DE ESTADÍSTICAS</footer>
+</div>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
